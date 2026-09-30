@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package automotive;
+
+message Telemetry {
+  uint64 sample_id = 1;
+  double speed_mps = 2;
+  double target_speed_mps = 3;
+  bool driver_brake_pressed = 4;
+}
+
+message ActuatorCommand {
+  uint64 sample_id = 1;
+  double throttle_percent = 2;
+  double brake_percent = 3;
+  string reason = 4;
+}
